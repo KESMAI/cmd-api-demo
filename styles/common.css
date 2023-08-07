@@ -1,0 +1,223 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Noto+Sans&display=swap');
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: url(/img/main_bg.png)no-repeat top center;
+    position: relative;
+}
+
+header {
+    height: 105px;
+    position: relative;
+    background-color: #FFF;
+    width: 100%;
+}
+
+header h1 {
+    position: absolute;
+    left: 50%;
+    top: 35px;
+    transform: translateX(-50%);
+    display: inline-block;
+}
+
+header .topBtn {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    text-align: left;
+}
+
+header .memInfo {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    overflow: hidden;
+}
+
+header .topBtn li {
+    display: inline-block;
+}
+
+header .memInfo li {
+    display: inline;
+    float: left;
+}
+
+header .topBtn li~li,
+header .memInfo li~li {
+    margin-left: 20px;
+}
+
+header .topBtn li a,
+header .memInfo li a {
+    line-height: 46px;
+    padding: 0 35px;
+    background-color: #ec1d51;
+    border-radius: 5px;
+    display: block;
+    color: #FFF;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+header .topBtn li:last-child a,
+header .memInfo li:last-child a {
+    background-color: #FFF;
+    border: 1px solid #ec1d51;
+    color: #000;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    border-radius: 100%;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+    background-color: #FFF;
+}
+
+header .memInfo li dl {
+    display: block;
+}
+
+header .memInfo li dl dt {
+    display: block;
+    color: #000;
+}
+
+header .memInfo li dl dt svg {
+    margin-right: 5px;
+}
+
+header .memInfo li dl dd {
+    display: block;
+    color: #ec1d51;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+header .memInfo li button {
+    border: 0;
+    cursor: pointer;
+    width: 46px;
+    height: 46px;
+    border-radius: 100%;
+    background-color: #414141;
+    font-size: 18px;
+    line-height: 46px;
+    text-align: center;
+    color: #FFF;
+}
+
+header .memInfo li button~button {
+    margin-left: 10px;
+}
+
+section h2 {
+    position: absolute;
+    top: 300px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 70px;
+}
+
+section h2 span,
+section h2 p {
+    display: block;
+    font-family: 'Lilita One', cursive;
+    color: #FFF;
+    text-shadow: 2px 4px 2px #000;
+}
+
+section h2 p {
+    font-size: 90px;
+    margin-top: 50px;
+}
+
+section>button {
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+    width: 530px;
+    height: 169px;
+    border: 0;
+    background-color: transparent;
+    background: url(/img/game_btn.png);
+    cursor: pointer;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 155px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+}
+
+section footer {
+    position: absolute;
+    bottom: 30px;
+    color: #666;
+    display: block;
+    text-align: center;
+    width: 100%;
+
+}
+
+.inputBox {
+    width: 100%;
+}
+
+.inputBox div {
+    width: 100%;
+}
+
+.inputBox div~div {
+    margin-top: 10px;
+}
+
+.inputBox input {
+    width: 100%;
+}
+
+.modelBtn {
+    display: block;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.modelBtn button {
+    background-color: #414141;
+    font-size: 18px;
+    text-align: center;
+    width: 49%;
+    line-height: 46px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    color: #FFF;
+}
+
+.modelBtn button:last-child {
+    float: right;
+    background-color: #ec1d51;
+}
