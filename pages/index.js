@@ -88,7 +88,7 @@ export default function Home() {
         user_pw: signup_user_pw,
       })
       .then(res => {
-        console.log(res);
+        window.location.reload(true);
       });
   };
 
