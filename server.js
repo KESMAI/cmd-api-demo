@@ -10,7 +10,6 @@ const jwt = require("jsonwebtoken");
 dotenv.config();
 
 const { sequelize, User } = require("./model/index.js");
-const { resolve } = require("path");
 sequelize
   // sync : MySQL에 테이블이 존재 하지 않을때 생성
   //      force: true   => 이미 테이블이 있으면 drop하고 다시 테이블 생성
