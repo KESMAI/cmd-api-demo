@@ -276,7 +276,7 @@ app.prepare().then(() => {
         if (data.user_pw !== user_pw) {
           res.send({
             result: false,
-            msg: "비밀번호가 틀렸습니다.",
+            msg: "ERROR_PASSWORD",
           });
         } else {
           const refresh_token = jwt.sign(
@@ -315,7 +315,7 @@ app.prepare().then(() => {
       })
       .catch(err => {
         console.log(err);
-        res.send({ result: false, msg: "아이디가 없습니다." });
+        res.send({ result: false, msg: "ERROR_ID" });
       });
   });
   server.all("*", (req, res) => {

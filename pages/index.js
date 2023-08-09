@@ -69,15 +69,15 @@ export default function Home() {
   };
   const sign_up = async () => {
     if (signup_user_name == "") {
-      alert("유저 이름을 입력해 주세요");
+      alert("Please enter your username");
       return;
     }
     if (signup_user_id == "") {
-      alert("유저 아이디를 입력해 주세요");
+      alert("Please enter your user ID");
       return;
     }
     if (signup_user_pw == "") {
-      alert("비밀번호를 입력해 주세요");
+      alert("Please enter a password");
       return;
     }
 
@@ -110,6 +110,15 @@ export default function Home() {
           localStorage.setItem("cmd-user", access_token);
           localStorage.setItem("cmd-user-refresh", refresh_token);
           window.location.assign("/");
+        } else if (
+          res.data.result == false &&
+          res.data.msg == "ERROR_PASSWORD"
+        ) {
+          alert("Incorrect password");
+          return;
+        } else if (res.data.result == false && res.data.msg == "ERROR_ID") {
+          alert("Incorrect ID");
+          return;
         }
       })
       .catch(err => {
